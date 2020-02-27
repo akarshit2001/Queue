@@ -21,7 +21,7 @@ public class Defination<E> implements QueueAdt<E> {
 
     @Override
     public boolean add(E item) {
-        return false;
+        return true;
     }
 
     @Override
