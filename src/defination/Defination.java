@@ -2,6 +2,8 @@ package defination;
 
 import adt.QueueAdt;
 
+import java.util.NoSuchElementException;
+
 public class Defination<E> implements QueueAdt<E> {
     private int size = 0;
     private Node<E> head = null;
@@ -57,7 +59,11 @@ public class Defination<E> implements QueueAdt<E> {
 
     @Override
     public E peek() {
-        return null;
+        if (head == null) {
+            throw new NoSuchElementException("Underflow");
+        } else {
+            return head.getData();
+        }
     }
 
     @Override
@@ -78,6 +84,7 @@ public class Defination<E> implements QueueAdt<E> {
             System.out.print(data + (i < size - 1 ? "," : " "));
             temp = temp.getNext();
         }
+        System.out.println("");
     }
 
     private static class Node<E> {

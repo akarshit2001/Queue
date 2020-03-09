@@ -11,5 +11,6 @@ public class Main {
         def.display();
         def.deQueue();
         def.peek();
+        System.out.println("ELement from peek is " + def.peek());
     }
 }
