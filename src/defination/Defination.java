@@ -54,21 +54,37 @@ public class Defination<E> implements QueueAdt<E> {
 
     @Override
     public E deQueue() {
-        return null;
-    }
-
-    @Override
-    public E peek() {
         if (head == null) {
             throw new NoSuchElementException("Underflow");
         } else {
-            return head.getData();
+            E removeElement = head.getData();
+            head = head.next;
+            System.out.println(removeElement);
+            size--;
+            return removeElement;
+        }
+    }
+
+    @Override
+    public void peek() {
+        if (head == null) {
+            throw new NoSuchElementException("Underflow");
+        } else {
+            System.out.println(head.getData());
         }
     }
 
     @Override
     public E poll() {
-        return null;
+        System.out.println(head.getData());
+        if (head == null) {
+            return null;
+        } else {
+            E pollelement = head.getData();
+            head = head.next;
+            size--;
+            return pollelement;
+        }
     }
 
     @Override

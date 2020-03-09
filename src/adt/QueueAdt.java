@@ -6,7 +6,7 @@ public interface QueueAdt<E> {
 
     E deQueue();
 
-    E peek();
+    void peek();
 
     E poll();
 

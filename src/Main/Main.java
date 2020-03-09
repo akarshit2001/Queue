@@ -11,6 +11,10 @@ public class Main {
         def.display();
         def.deQueue();
         def.peek();
-        System.out.println("ELement from peek is " + def.peek());
+        // System.out.println("ELement from peek is " + def.peek());
+        def.poll();
+        def.display();
+
+        //System.out.println("Poll element is "+def.poll());
     }
 }
