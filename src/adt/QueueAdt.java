@@ -2,13 +2,15 @@ package adt;
 
 public interface QueueAdt<E> {
 
-    boolean add(E item);
+    void enQueue(E item);
 
-    E remove();
+    E deQueue();
 
     E peek();
 
     E poll();
 
     E element();
+
+    void display();
 }
